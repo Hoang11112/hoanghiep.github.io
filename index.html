@@ -166,41 +166,46 @@
         .skills-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; list-style: none; margin: 2rem 0; }
         .skill-item { background: #f8fafc; padding: 20px; border-radius: 10px; border-left: 5px solid #2563eb; }
         .future-box { background: #1e293b; color: white; padding: 2rem; border-radius: 15px; margin-top: 2rem; }
-    </style>
-</head>
-        
-        /* === LIÊN HỆ === */
-        .contact-section { padding: 6rem 2rem; background-color: #f8fafc; }
+    
+         /* === LIÊN HỆ === */
+        .contact-section { padding: 4rem 2rem; background-color: #f8fafc; }
         .contact-container {
-            max-width: 900px; margin: 0 auto; background-color: #ffffff;
-            border-radius: 24px; padding: 3rem; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
-        }
-        .form-input {
-            width: 100%; padding: 0.75rem 1rem; border-radius: 8px;
-            border: 1px solid #cbd5e1; font-family: inherit; margin-bottom: 1rem;
-        }
-        .submit-btn {
-            background-color: #2563eb; color: white; border: none;
-            padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; width: 100%; cursor: pointer;
-        }
-        .contact-info { border-left: 1px solid #f1f5f9; padding-left: 3rem; display: flex; flex-direction: column; justify-content: center; }
-        .info-block { margin-bottom: 1.5rem; }
-        .info-block-title { font-size: 0.8rem; font-weight: 700; color: #64748b; text-transform: uppercase; }
-        .info-block-content { font-size: 1.05rem; font-weight: 600; }
+    max-width: 900px; margin: 0 auto; background-color: #ffffff;
+    border-radius: 24px; padding: 3rem; display: grid; 
+    grid-template-columns: 1.2fr 0.8fr; gap: 3rem;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.04);
+}
 
-        /* === FOOTER === */
-        footer { background-color: #0f172a; color: #94a3b8; padding: 3rem 2rem; font-size: 0.9rem; }
-        .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; }
-        .footer-brand { font-size: 1.2rem; font-weight: 800; color: white; }
-        
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero-container, .skills-grid, .ref-grid, .contact-container { grid-template-columns: 1fr; }
-            .hero-image-box { order: -1; }
-            .contact-info { border-left: none; padding-left: 0; padding-top: 2rem; border-top: 1px solid #f1f5f9; }
-            .footer-container { flex-direction: column; text-align: center; gap: 1rem; }
-        }
+.form-input {
+    width: 100%; padding: 0.75rem 1rem; border-radius: 8px;
+    border: 1px solid #cbd5e1; font-family: inherit; margin-bottom: 1rem;
+    transition: 0.3s;
+}
+.form-input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+
+.submit-btn {
+    background-color: #2563eb; color: white; border: none;
+    padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; 
+    width: 100%; cursor: pointer; transition: 0.3s;
+}
+.submit-btn:hover { background-color: #1d4ed8; }
+
+.contact-info { border-left: 1px solid #f1f5f9; padding-left: 3rem; display: flex; flex-direction: column; justify-content: center; }
+.info-block { margin-bottom: 1.5rem; }
+.info-block-title { font-size: 0.8rem; font-weight: 700; color: #64748b; text-transform: uppercase; margin-bottom: 0.25rem;}
+.info-block-content { font-size: 1.05rem; font-weight: 600; color: #1e293b; }
+
+           /* === FOOTER === */
+footer { background-color: #0f172a; color: #94a3b8; padding: 3rem 2rem; font-size: 0.9rem; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; }
+.footer-brand { font-size: 1.2rem; font-weight: 800; color: white; }
+
+            /* Responsive */
+@media (max-width: 968px) {
+    .contact-container { grid-template-columns: 1fr; }
+    .contact-info { border-left: none; padding-left: 0; padding-top: 2rem; border-top: 1px solid #f1f5f9; }
+    .footer-container { flex-direction: column; text-align: center; gap: 1rem; }
+}
     </style>
 </head>
 <body>
@@ -339,24 +344,31 @@
     </div>
 </section>
     
-    <section class="contact-section" id="contact">
-        <div class="contact-container">
-            <div>
-                <h3 style="font-size:1.5rem; margin-bottom:1rem;">Kết nối với Hoàng Hiệp</h3>
-                <form onsubmit="event.preventDefault(); alert('Đã gửi lời nhắn!');">
-                    <input type="text" class="form-input" placeholder="Tên của bạn..." required>
-                    <input type="email" class="form-input" placeholder="Email của bạn..." required>
-                    <textarea class="form-input" rows="4" placeholder="Lời nhắn..." required></textarea>
-                    <button type="submit" class="submit-btn">Gửi lời nhắn</button>
-                </form>
+   <section class="contact-section" id="contact">
+    <div class="contact-container">
+        <form class="contact-form" action="#" method="POST">
+            <input type="text" class="form-input" placeholder="Tên của bạn" required>
+            <input type="email" class="form-input" placeholder="Email của bạn" required>
+            <textarea class="form-input" placeholder="Lời nhắn của bạn..." rows="4"></textarea>
+            <button type="submit" class="submit-btn">Gửi đi</button>
+        </form>
+
+        <div class="contact-info">
+            <div class="info-block">
+                <div class="info-block-title">Email</div>
+                <div class="info-block-content">25040645@ulis.vnu.edu.vn</div>
             </div>
-            <div class="contact-info">
-                <div class="info-block"><div class="info-block-title">Email VNU</div><div class="info-block-content">25040645@ulis.vnu.edu.vn</div></div>
-                <div class="info-block"><div class="info-block-title">Điện thoại</div><div class="info-block-content">0984482994</div></div>
-                <div class="info-block"><div class="info-block-title">Nơi học tập</div><div class="info-block-content">Trường Đại học Ngoại Ngữ - ĐHQGHN</div></div>
+            <div class="info-block">
+                <div class="info-block-title">Điện thoại</div>
+                <div class="info-block-content">0984 482 994</div>
+            </div>
+            <div class="info-block">
+                <div class="info-block-title">Địa chỉ</div>
+                <div class="info-block-content">Trường Đại Học Ngoại Ngữ - ĐHQGHN</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <div class="footer-container">
@@ -370,6 +382,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>
