@@ -50,7 +50,7 @@
         /* === TRANG ĐẦU (HERO SECTION) === */
         .hero-section {
             padding: 10rem 2rem 5rem 2rem;
-            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent), #ffffff;
+            background: linear-gradient(135deg, #f5f9ff 0%, #dbeafe 100%);
             border-bottom: 1px solid #f1f5f9;
         }
         .hero-container {
@@ -104,6 +104,50 @@
 .quote-box {
     font-style: italic; font-size: 0.9rem; color: #64748b;
     border-left: 3px solid #2563eb; padding-left: 1rem; text-align: left;
+}
+
+        /* --- GIAO DIỆN PHẦN SỞ THÍCH --- */
+.hobbies-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff; /* Nền trắng để nổi bật trên các phần khác */
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hobby-card {
+    background: #f8f9fa; /* Màu nền xám nhạt rất sang */
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15); /* Hiệu ứng nổi bóng màu xanh khi di chuột */
+}
+
+.hobby-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hobby-card h3 {
+    color: #0d6efd; /* Màu xanh đồng bộ với nút Google Drive */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.hobby-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
         /* === KỸ NĂNG === */
@@ -222,7 +266,7 @@ footer { background-color: #0f172a; color: #94a3b8; padding: 3rem 2rem; font-siz
         </div>
     </nav>
 
-    <section id="about" class="profile-section">
+    <section id="about" class="hero-section">
         <div class="hero-container">
             <div>
                 <span class="hero-badge">Trường Đại Học Ngoại Ngữ - ĐHQGHN (ULIS)</span>
@@ -246,6 +290,39 @@ footer { background-color: #0f172a; color: #94a3b8; padding: 3rem 2rem; font-siz
         </div>
     </section>
 
+    <!-- PHẦN SỞ THÍCH -->
+    <section class="hobbies-section" id="hobbies">
+        <div class="section-wrapper">
+            <div class="section-header">
+                <h2 class="section-title">Sở Thích & Đam Mê</h2>
+            </div>
+            <div class="hobbies-grid">
+                
+                <!-- Sở thích 1 -->
+                <div class="hobby-card">
+                    <div class="hobby-icon">📚</div>
+                    <h3>Đọc sách</h3>
+                    <p>Thường xuyên tìm đọc các đầu sách văn học, khoa học và các tài liệu chuyên ngành nhằm khám phá những góc nhìn mới để mở rộng vốn từ, trau dồi kiến thức, nâng cao tư duy phản biện.</p>
+                </div>
+
+                <!-- Sở thích 2 -->
+                <div class="hobby-card">
+                    <div class="hobby-icon">🔍</div>
+                    <h3>Học ngoại ngữ</h3>
+                    <p>Em có niềm yêu thích với việc học tiếng Anh thông qua các khóa học trực tuyến, podcast và pnhững nội dung bản thân yêu thích. Ngoài ra em cũng học thêm nhiều ngoại ngữ khác như tiếng Trung vì đây là ngôn ngữ đang ngày càng phổ biến giúp em có thêm nhiều cơ hội việc làm trong môi trường đa văn hóa.</p>
+                </div>
+
+                <!-- Sở thích 3 -->
+                <div class="hobby-card">
+                    <div class="hobby-icon">✍️</div>
+                    <h3>Chạy bộ</h3>
+                    <p>Em thường duy trì thói quen chạy bộ vào mỗi buổi chiều để rèn luyện sức khỏe và giải tỏa căng thẳng sau những giờ học tập. Chạy bộ giúp em nâng cao tính kỷ luật, sự kiên trì và giữ cho tinh thần luôn thoải mái.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section class="skills-section" id="skills">
         <div class="section-wrapper">
             <div class="section-header">
@@ -253,9 +330,9 @@ footer { background-color: #0f172a; color: #94a3b8; padding: 3rem 2rem; font-siz
                 <h2 class="section-title">Kỹ Năng Số & Ngoại Ngữ</h2>
             </div>
             <div class="skills-grid">
-                <div class="skill-card"><div class="skill-icon">EN</div><h3 class="skill-title">Dịch thuật</h3><p class="skill-desc">Chuyển ngữ văn bản linh hoạt, giữ vững văn phong bản địa.</p></div>
-                <div class="skill-card"><div class="skill-icon">AI</div><h3 class="skill-title">Soạn thảo văn bản và kĩ năng tin học</h3><p class="skill-desc">Làm chủ câu lệnh để biên soạn tài liệu, dịch thuật ngữ cảnh.</p></div>
-                <div class="skill-card"><div class="skill-icon">📁</div><h3 class="skill-title">Quản Lý Tập Tin</h3><p class="skill-desc">Sắp xếp kho lưu trữ học liệu nghiên cứu một cách logic khoa học.</p></div>
+                <div class="skill-card"><div class="skill-icon">EN</div><h3 class="skill-title">Dịch thuật</h3><p class="skill-desc">Có khả năng dịch các văn bản Anh – Việt và Việt – Anh ở mức học thuật và giao tiếp thông thường, đảm bảo truyền tải đúng nội dung, ngữ cảnh và giữ được sự tự nhiên của ngôn ngữ.</p></div>
+                <div class="skill-card"><div class="skill-icon">AI</div><h3 class="skill-title">Soạn thảo văn bản và kĩ năng tin học</h3><p class="skill-desc">Thành thạo soạn thảo và trình bày văn bản trên Microsoft Word và Google Doc. Có khả năng định dạng tài liệu, xây dựng báo cáo, bài luận và các văn bản hành chính với bố cục rõ ràng, chuyên nghiệp.</p></div>
+                <div class="skill-card"><div class="skill-icon">📁</div><h3 class="skill-title">Quản Lý Tập Tin</h3><p class="skill-desc">Sử dụng thành thạo các ứng dụng văn phòng cơ bản như Microsoft Office và Google Workspace. Biết cách tổ chức, lưu trữ, quản lý tập tin khoa học trên máy tính và các nền tảng lưu trữ đám mây, giúp tối ưu hiệu quả học tập và làm việc.</p></div>
             </div>
         </div>
     </section>
