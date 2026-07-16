@@ -37,7 +37,7 @@
         }
         .nav-logo { font-size: 1.3rem; font-weight: 800; color: #1e3a8a; text-transform: uppercase; }
         .nav-logo span { color: #3b82f6; }
-        .nav-links { display: flex; gap: 2rem; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
         .nav-links a { font-size: 0.95rem; font-weight: 600; color: #475569; transition: color 0.3s ease; }
         .nav-links a:hover { color: #2563eb; }
         .nav-btn {
@@ -49,12 +49,12 @@
 
         /* === TRANG ĐẦU (HERO SECTION) === */
         .hero-section {
-            padding: 8rem 2rem 5rem 2rem;
+            padding: 10rem 2rem 5rem 2rem;
             background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.05), transparent), #ffffff;
             border-bottom: 1px solid #f1f5f9;
         }
         .hero-container {
-            max-width: 1200px; margin: 0 auto;
+            max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center;
             display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center;
         }
         .hero-badge {
@@ -80,9 +80,10 @@
         .image-card {
             background: #ffffff; padding: 1.5rem; border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;
-            width: 200px; max-width: 200px; text-align: center;
+            width: 250px; text-align: center;
             transform: rotate(-2deg); transition: 0.3s;
         }
+        .profile-img { width: 100%; height: 250px; object-fit: cover; border-radius: 16px; margin-bottom: 1rem; }
         .image-card:hover { transform: rotate(0deg) scale(1.02); }
         .avatar-placeholder {
             height: 200px; border-radius: 16px; margin-bottom: 1.5rem;
@@ -118,7 +119,7 @@
 
         /* === BÀI TẬP THỰC HÀNH (PROJECTS) === */
         .projects-section { padding: 6rem 2rem; background-color: #f8fafc; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
         .project-card {
             background: #ffffff; border-radius: 20px; overflow: hidden;
             border: 1px solid #e2e8f0; transition: 0.3s; display: flex; flex-direction: column;
@@ -139,7 +140,9 @@
             position: absolute; top: 1rem; left: 1rem; background: rgba(255,255,255,0.95);
             color: #1e293b; padding: 0.3rem 0.8rem; border-radius: 30px; font-size: 0.75rem; font-weight: 700;
         }
-        .card-body { padding: 2rem 1.8rem; flex-grow: 1; }
+        .card-img-wrapper { height: 200px; overflow: hidden; }
+        .card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .card-body { padding: 1.5rem; flex-grow: 1; }
         .card-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.8rem; }
         .card-text { color: #64748b; font-size: 0.9rem; }
         .card-footer {
@@ -149,11 +152,12 @@
         .card-link { color: #2563eb; font-weight: 600; font-size: 0.9rem; }
 
         /* === CHIÊM NGHIỆM === */
-        .reflection-section { padding: 6rem 2rem; background-color: #ffffff; }
-        .reflection-container { max-width: 1000px; margin: 0 auto; }
-        .reflection-box { background-color: #f8fafc; border-radius: 24px; padding: 3rem; border: 1px solid #f1f5f9; }
-        .ref-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; }
-        .ref-col h3 { font-size: 1.2rem; margin-bottom: 1rem; color: #2563eb; }
+        .reflection-box { max-width: 1000px; margin: 0 auto; background: #ffffff; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .skills-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; list-style: none; margin: 2rem 0; }
+        .skill-item { background: #f8fafc; padding: 20px; border-radius: 10px; border-left: 5px solid #2563eb; }
+        .future-box { background: #1e293b; color: white; padding: 2rem; border-radius: 15px; margin-top: 2rem; }
+    </style>
+</head>
         
         /* === LIÊN HỆ === */
         .contact-section { padding: 6rem 2rem; background-color: #f8fafc; }
@@ -250,51 +254,43 @@
             <div class="project-grid">
                 <div class="project-card">
                    <div class="project-card">
-                        <div class="card-img-wrapper">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ14FnbZLCp6Lsy2oer2i6a_occ-8D_w3WhIRadAhiF_g&s=10" alt="Ảnh bài 1">
-                    </div>
-                    <div class="card-img-box banner-1">📁 File Management<span class="card-badge">Bài Số 1</span></div>
-                    <div class="card-body"><h3 class="card-title">Thao tác cơ bản với tệp tin và thư mục</h3><p class="card-text">Thực hành thiết lập cấu trúc cây thư mục tối giản, định vị bài giảng tiếng Anh siêu tốc.</p></div>
-                    <div class="card-footer"><a href="https://drive.google.com/file/d/18IjT86LU0sFFdFiqtaZ_rt4AQzNrW6m5/view?usp=drive_link" class="card-link">Xem tài liệu &rarr;</a></div>
+                        <div class="card-img-wrapper"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ14FnbZLCp6Lsy2oer2i6a_occ-8D_w3WhIRadAhiF_g&s=10" alt="Ảnh bài 1"></div>
+                    <div class="card-body">
+                    <h3>Bài Số 1</h3>
+                    <p>Thao tác cơ bản với tệp tin và thư mục</p>
+                   <div class="card-footer"><a href="https://drive.google.com/file/d/18IjT86LU0sFFdFiqtaZ_rt4AQzNrW6m5/view?usp=drive_link" class="card-link">Xem tài liệu &rarr;</a></div>
                 </div>
                 <div class="project-card">
-                        <div class="card-img-wrapper">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz4o-oIKJbo0hir5t78nDacpWKEL04Uy594WC-Ea3kWQ&s=10" alt="Ảnh bài 2">
-                    </div>
-                    <div class="card-img-box banner-2">✍️ Searching for and evaluating academic information<span class="card-badge">Bài Số 2</span></div>
-                    <div class="card-body"><h3 class="card-title">Tìm kiếm và đánh giá thông tin học thuật </h3><p class="card-text">Nghiên cứu các chuẩn trích dẫn nguồn uy tín (APA, Harvard), cách diễn đạt tránh đạo văn.</p></div>
+                        <div class="card-img-wrapper"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz4o-oIKJbo0hir5t78nDacpWKEL04Uy594WC-Ea3kWQ&s=10" alt="Ảnh bài 2"></div>
+                    <div class="card-body">
+                    <h3>Bài Số 2</h3>
+                    <p>Tìm kiếm và đánh giá thông tin học thuật</p>
                     <div class="card-footer"><a href="https://drive.google.com/file/d/1FIa4s2I6kF20937vNJdhITjSX6rkZh8M/view?usp=drive_link" class="card-link">Xem tài liệu &rarr;</a></div>
                 </div>
                 <div class="project-card">
-                    <div class="card-img-wrapper">
-                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_KxoecXT7uyGm8UXY9w0m-3ialeDABitJO7pCfrEc_w&s=10" alt="Ảnh bài 3">
-                    </div>
-                    <div class="card-img-box banner-3">💬 AI Prompting<span class="card-badge">Bài Số 3</span></div>
-                    <div class="card-body"><h3 class="card-title">Viết Prompt hiệu quả cho các tác vụ học tập</h3><p class="card-text">Hệ thống cấp độ Prompt giúp tối ưu hóa việc phân tích ngữ pháp tiếng Anh và phát âm.</p></div>
+                    <div class="card-img-wrapper"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_KxoecXT7uyGm8UXY9w0m-3ialeDABitJO7pCfrEc_w&s=10" alt="Ảnh bài 3"></div>
+                    <h3>Bài Số 3</h3>
+                    <p>Viết Prompt hiệu quả cho các tác vụ học tập</p>
                     <div class="card-footer"><a href="https://drive.google.com/file/d/1SD63NlcaM9BUu5bmQXowc4M8TTWtz2mj/view?usp=drive_link" class="card-link">Xem tài liệu &rarr;</a></div>
                 </div>
                 <div class="project-card">
-                      <div class="card-img-wrapper">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCuqNekIyoBOAnW4ukqtlUYD4IGiWxSfGslGpuobBKw&s=10" alt="Ảnh bài 4">
-                     </div>
-                    <div class="card-img-box banner-4">👥 Team Work<span class="card-badge">Bài Số 4</span></div>
-                    <div class="card-body"><h3 class="card-title">Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</h3><p class="card-text">Hành trình Nhóm 13 phối hợp trên các công cụ Trello, Google Docs cho kế hoạch dự án.</p></div>
+                      <div class="card-img-wrapper"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCuqNekIyoBOAnW4ukqtlUYD4IGiWxSfGslGpuobBKw&s=10" alt="Ảnh bài 4"> </div>
+                    <h3>Bài Số 4</h3>
+                    <p>Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm</p>
                     <div class="card-footer"><a href="https://drive.google.com/file/d/1lBkpY8T_vKeS9f_eksMrVHlFwoFQM-kX/view?usp=drive_link" class="card-link">Xem tài liệu &rarr;</a></div>
                 </div>
                 <div class="project-card">
                     <div class="card-img-wrapper">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGMYB2Pm99vJCXqJpkzWSwnjqIo8V-2kBteRwdXNcdHw&s=10" alt="Ảnh bài 5">
                  </div>
-                    <div class="card-img-box banner-5">🎨 Content Creation<span class="card-badge">Bài Số 5</span></div>
-                    <div class="card-body"><h3 class="card-title">Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h3><p class="card-text">Dùng ChatGPT lên dàn ý thuyết trình, AI thiết kế đồ họa tạo slide bài giảng tiếng Anh.</p></div>
+                    <h3>Bài Số 5</h3>
+                    <p>Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</p>
                     <div class="card-footer"><a href="https://drive.google.com/file/d/1YbTk-QfBY3d-mHj0EyepriYaMDZgFBHR/view?usp=drive_link" class="card-link">Xem tài liệu &rarr;</a></div>
                 </div>
                 <div class="project-card">
-                    <div class="card-img-wrapper">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt1hmVY6LE-6UE2QJILJ4ybDOIUQBNu-szJyPaGHaAKg&s=10" alt="Ảnh bài 6">
-                </div>
-                    <div class="card-img-box banner-6">🛡️ Responsible AI<span class="card-badge">Bài Số 6</span></div>
-                    <div class="card-body"><h3 class="card-title">Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3><p class="card-text">Đánh giá ranh giới đạo đức khi dùng AI, thiết lập quy tắc tự học ngoại ngữ an toàn.</p></div>
+                    <div class="card-img-wrapper"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt1hmVY6LE-6UE2QJILJ4ybDOIUQBNu-szJyPaGHaAKg&s=10" alt="Ảnh bài 6"></div>
+                  <h3>Bài Số 6</h3>
+                    <p>Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</p>
                     <div class="card-footer"><a href="https://drive.google.com/file/d/1JB3_lAHF9MHBek_PtIovxXaR1G-8JCgW/view?usp=drive_link" class="card-link">Xem tài liệu &rarr;</a></div>
                 </div>
             </div>
