@@ -100,54 +100,16 @@
             object-position: center center; 
         }
 
-        .quote-box {
-            font-style: italic; font-size: 0.9rem; color: #64748b;
-            border-left: 3px solid #2563eb; padding-left: 1rem; text-align: left;
-        }
+        .quote-box { font-style: italic; font-size: 0.9rem; color: #64748b; border-left: 3px solid #2563eb; padding-left: 1rem; text-align: left; }
 
-        /* --- GIAO DIỆN PHẦN SỞ THÍCH --- */
-        .hobbies-section {
-            padding: 4rem 2rem;
-            background-color: #ffffff;
-        }
-
-        .hobbies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .hobby-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hobby-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15);
-        }
-
-        .hobby-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hobby-card h3 {
-            color: #0d6efd;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .hobby-card p {
-            color: #555;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
+        /* === GIAO DIỆN PHẦN SỞ THÍCH === */
+        .hobbies-section { padding: 4rem 2rem; background-color: #ffffff; }
+        .hobbies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .hobby-card { background: #f8f9fa; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hobby-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15); }
+        .hobby-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hobby-card h3 { color: #0d6efd; margin-bottom: 1rem; font-size: 1.2rem; }
+        .hobby-card p { color: #555; line-height: 1.6; font-size: 0.95rem; }
 
         /* === KỸ NĂNG === */
         .skills-section { padding: 5rem 2rem; background-color: #ffffff; }
@@ -237,9 +199,7 @@
         .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; }
         .footer-brand { font-size: 1.2rem; font-weight: 800; color: white; }
 
-        /* ========================================================
-           RESPONSIVE (SỬA LỖI HIỂN THỊ TRÊN ĐIỆN THOẠI) 
-           ======================================================== */
+        /* === RESPONSIVE (SỬA LỖI HIỂN THỊ TRÊN ĐIỆN THOẠI) === */
         @media (max-width: 968px) {
             .nav-container { flex-direction: column; gap: 1rem; text-align: center; }
             .nav-links { flex-wrap: wrap; justify-content: center; }
@@ -259,7 +219,7 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-logo">Lê Hoàng Hiệp<span>.</span></a>
+            <a href="#" class="nav-logo">Lê Hoàng Hiệp<span></span></a>
             <div class="nav-links">
                 <a href="#about">Giới thiệu</a>
                 <a href="#projects">Bài tập</a>
@@ -270,7 +230,7 @@
         </div>
     </nav>
 
-    <section id="about" class="hero-section">
+    <section id="about" class="profile-section">
         <div class="hero-container">
             <div>
                 <span class="hero-badge">Trường Đại Học Ngoại Ngữ - ĐHQGHN (ULIS)</span>
